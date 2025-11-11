@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5E5E5;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #14213D;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+}
+
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #14213D;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container {
+    width: 100vw;
+    display: flex;
+    flex-flow: wrap-reverse;
+    margin: 2% 0px;
+    padding: 2%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    display: inline-block;
+    background-image: linear-gradient(#f4f4f4);
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px 0;
+}
+
+.card h3 {
+    height: auto;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    height: 30px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.price {
+    font-weight: bold;
+    color: #27AE60;
+    margin: 5px 0;
+}
+
+.rating {
+    color: #fc9b00;
+    font-weight: bold;
+}
+
+.btn-comprar {
+    background-image: radial-gradient(#163E73);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+    margin-top: 15px;
+}
+
+.btn-comprar:hover {
+    background-image: radial-gradient(#5B9ED9, #163E73);
+
+}
+
+.btn-carrinho {
+    background-image: radial-gradient(#fc9b00);
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.4s;
+    box-shadow: 1px 1px black;
+}
+
+.btn-carrinho:hover {
+    background-image: radial-gradient(#f2b203, #fc9b00);
+
+}
+
+.icon {
+    display: flex;
+    color: #FCA311;
+    cursor: pointer;
+}
+
+#banner {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 80%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
