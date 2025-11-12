@@ -27,10 +27,6 @@ body {
     font-weight: bold;
 }
 
-main {
-    width: 100%;
-}
-
 .header {
     z-index: 100;
     position: fixed;
@@ -43,23 +39,31 @@ main {
     align-items: center;
 }
 
-#container {
-    width: 100vw;
-    display: flex;
-    flex-flow: wrap-reverse;
-    margin: 2% 0px;
-    padding: 2%;
+main {
+    width: 100%;
+    margin: 2%;
     justify-content: center;
     justify-items: center;
+
+}
+
+#container {
+    width: 90%;
+    display: flex;
+    flex-flow: wrap;
+    padding: 2%;
 }
 
 .card {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: auto 1frs;
     background-image: linear-gradient(#f4f4f4);
     border-radius: 10px;
     max-width: 300px;
+    max-height: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
+    justify-items: center;
     text-align: center;
     margin: 10px;
 }
@@ -67,10 +71,15 @@ main {
 .card:hover {
     transform: scale(1.02);
 }
+.miniCard{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+}
 
 .card img {
-    width: 100%;
-    height: 200px;
+    width: 40%;
+    height: 90px;
     object-fit: contain;
     border-radius: 8px;
     margin-bottom: 10px 0;
@@ -85,7 +94,7 @@ main {
 .card p {
     color: #555;
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     height: 30px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -106,10 +115,11 @@ main {
     background-image: radial-gradient(#163E73);
     color: rgb(255, 255, 255);
     border: none;
-    padding: 10px 20px;
     border-radius: 6px;
+    padding: 5px;
     cursor: pointer;
     font-size: 1rem;
+    justify-items: center;
     transition: background 0.2s;
     box-shadow: 2px 2px rgb(0, 0, 0);
     margin-top: 15px;
@@ -124,7 +134,7 @@ main {
     background-image: radial-gradient(#fc9b00);
     color: rgb(255, 255, 255);
     border: 1px solid black;
-    padding: 10px 20px;
+    padding: 5px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
