@@ -6,8 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
     <link rel="stylesheet" href="style.css">
+    <!--ICONES GOOGLE-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- API - MAPA - Localizacao Loja-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- DashBoard Itens mais vendidos-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 
 <body>
     <!-- Estrutura do cabecalho-->
@@ -15,18 +26,75 @@
         <span class="material-symbols-outlined icon">home</span>
         <span class="material-symbols-outlined icon">favorite</span>
         <span class="material-symbols-outlined icon">shopping_cart</span>
-
         <span class="material-symbols-outlined icon">search</span>
     </header>
     <!-- Estrutura dos card-->
-    <!--<img src="img/banner.png" alt="banner" id="banner">-->
     <main>
-        <section id="container"></section>
+        <!-- Localizacao Loja-->
+        <section id="introducao">
+            <h1 style="color: black;">Oliveira Store</h1>
+            <p id="Sobre">Algumas coisas</p>
+            <div id="map"></div>
+        </section>
+        <!--Produtos-->
+        <section id="ProdGraf">
+            <div id="container"></div>
+
+            <canvas id="grafico"></canvas>
+        </section>
+
     </main>
     <!-- Estrutura do Rodape-->
     <footer class="footer">Todos os direitos reservados ©copy</footer>
 
-    <script src="main.js"></script>
+
+    <!-- Grafico -->
+    <script>
+        async function carregaDados() {
+            // Faz uma requisicao a API
+            const resposta = await fetch("https://dummyjson.com/products")
+            const dados = await resposta.json(); // Converte os dados de texto para objeto
+            const nomes = dados.products.map(p => p.title); // Pega a propriedade title e coloca no ARRY
+            const ratings = dados.products.map(p => p.rating); // Pega a propriedade rating e coloca no ARRAy
+            //***********************************************************************************************//
+
+            // MONTA O GRAFICO
+            new Chart(document.getElementById("grafico"), {
+                type: 'bar',
+                data: {
+                    labels: nomes,
+                    datasets: [{
+                        label: '# of Votes',
+                        data: ratings,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+        carregaDados();
+    </script>
+
+<!--PRoduto-->
+<script src="main.js"></script>
+<!--Mapa-->
+    <script>
+        var map = L.map('map').setView([-29.892002, -51.277140], 13);
+
+        //Mapa e Direitos autorais - Maximo de Zoom que o usuario pode dar
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        let Bsup = L.marker([-29.892002, -51.277140]).addTo(map).bindPopup('3º B Bup');
+    </script>
 </body>
 
 </html>
