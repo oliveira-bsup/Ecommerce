@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/corpoEstrutura.css">
+    <link rel="stylesheet" href="css/PAvaliacao.css">
     <link rel="stylesheet" href="css/style.css">
     <!--ICONES GOOGLE-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -15,7 +16,6 @@
 </head>
 
 <body>
-    <!-- Estrutura do cabecalho-->
     <header class="header">
         <section class="icones">
             <button aria-label="Ir para página inicial">
@@ -31,38 +31,23 @@
             </button>
         </section>
         <section class="paginas">
-            <a href="#">Itens</a>
+            <a href="index.html">Itens</a>
             <a href="#">Promoções</a>
-            <a href="avaliados.html">Mais avaliados</a>
+            <a href="#">Mais avaliados</a>
             <a href="#">Contato</a>
         </section>
-
     </header>
-
     <main>
         <section class="intro">
-            <h1>Estoque</h1>
+            <h1>Melhores Avaliacoes</h1>
             <div id="produtos-container"></div><!-- Estrutura dos card-->
-            <div id="melhoresProd"></div>
         </section>
-
-        <section class="intro-footer">
-            <canvas id="grafico" role="img" aria-label="Gráfico de produtos mais vendidos">
-                Seu navegador não suporta gráficos. Os produtos mais bem avaliados são...
-            </canvas>
-
-        </section>
-
     </main>
-
-    <!-- Estrutura do Rodape-->
     <footer class="footer">Todos os direitos reservados &copy;</footer>
 
+    <script src="js/MaisAvaliados.js"></script>
 
 
-    <!--Script Principal - Produtos-->
-    <script src="js/main.js"></script>
-    <script src="js/outrosProdutos.js"></script>
 </body>
 
 </html>

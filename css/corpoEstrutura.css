@@ -6,9 +6,9 @@
 
 :root {
 
-    --cabeca2: #00ADB5;
+    --cabeca2: #8794e1;
     --accent: #393E46;
-    --bg: #ff000053;/*Body*/
+    --bg: #a6afff;/*Body*/
     --footter: #222831;
 }
 
@@ -50,7 +50,7 @@ body {
 .paginas{
     display: flex;
     line-height: 30px;
-    background-color: #235db4;
+    background-color: var(--cabeca2);
     justify-content: space-between;
     padding: 0px 15px;
 }
@@ -62,7 +62,7 @@ a{
 .icones{
     display: flex;
     justify-content: space-around;
-    background-color: darkblue;
+    background-color: #2d4286;
     padding: 2px;
 }
 
