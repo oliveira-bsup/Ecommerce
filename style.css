@@ -169,10 +169,12 @@ img{
     width: 30%;
     height: 30%;
 }
-.modal {
-    left: 25%;
-    top: 25%;
-    width: 800px;
-    height:400px;
+
+.modal{
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+    width: 700px;
+    height:350px;
     padding: 15px;
 }
