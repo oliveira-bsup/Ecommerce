@@ -13,7 +13,7 @@ fetch("https://dummyjson.com/products")
                     </div>
 
                     <div class="card-img">
-                        <img src="${item.thumbnail}" alt="${item.title}" id="propaganda">
+                        <img src="${item.thumbnail}" alt="${item.title}">
                     </div>
 
                     <section class="avaliacao">
@@ -22,7 +22,7 @@ fetch("https://dummyjson.com/products")
                     </section>
 
                     <section class="card-conteudo">
-                       <h3>${item.title}</h3>
+                       <h4>${item.title}</h4>
                        <p>${item.description}</p>
                     </section>
 
@@ -32,8 +32,10 @@ fetch("https://dummyjson.com/products")
                     </div>
 
                     <!-- Modal --> 
-                    <dialog id="modal-${i}" class="modal"
-                    <button class="close-modal" data-modal="modal-${i}">X</button>
+                    <dialog id="modal-${i}" class="modal">
+                    <div class="close-modal">
+                        <button class="close-modal" data-modal="modal-${i}">X</button>
+                    </div>
                     <div class="qrcode">
                             <img src="${item.meta.qrCode}" alt="${item.title}">
                             <h3>${item.title}</h3>

@@ -11,25 +11,26 @@
 }
 
 body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bg);
-    display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
 }
 
 .footer {
     display: flex;
     width: 100%;
-    height: 60px;
+    position: relative;
+    height: 160px;
     background-color: var(--foter);
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 25px;
+    bottom: 0;
+    left: 0;
     font-weight: bold;
 }
 
@@ -46,125 +47,132 @@ body {
 }
 
 main {
+    padding-top: 80px;
     width: 100%;
-    margin: 2%;
+    min-height: 100vh;
     justify-content: center;
     justify-items: center;
+    background-color: #14213de1   ;
 
 }
 
-#container {
-    width: 90%;
+#container-cards {
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
     padding: 2%;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: auto 1frs;
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(#f4f4f4);
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 2px solid #ff6e00;
     max-width: 300px;
-    max-height: 300px;
+    max-height: 600px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     justify-items: center;
     text-align: center;
     margin: 10px;
+    
 }
 
 .card:hover {
     transform: scale(1.02);
 }
 
-.miniCard {
+.avaliacao {
+    /*Avaliacao e Carrinho*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+.card-conteudo {
+    /*Titulo e Paragrafo*/
     display: block;
     justify-content: center;
     justify-items: center;
+    height: 80px;
+    margin-bottom: 30px;
 }
-
-.card img {
-    width: 40%;
-    height: 90px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 10px 0;
+.card-footer {
+    display: flex;
+    flex-direction: column;
 }
-
-.card h3 {
-    height: auto;
-    font-size: 1.2rem;
-    margin: 10px 0;
+.card-img {
+    min-width: 100%;
+    height: 300px;
+    border: 3px solid #ff6e00;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: rgb(173, 7, 82);
 }
-
+img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
 .card p {
-    color: #555;
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-    height: 30px;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    color: #3c3c3c;
+    font-size: 0.8rem;
+    padding: 4px 0px;
+    height: 100%;
 }
 
 .price {
+    text-align: center;
     font-weight: bold;
-    color: #27AE60;
+    color: #ff6e00;
     margin: 5px 0;
+    font-size: 1.3rem;
 }
 
 .rating {
-    color: #fc9b00;
+    /* Numeros Avaliacao */
+    color: #555;
     font-weight: bold;
+    font-size: 0.9rem;
 }
-
 .btn-comprar {
-    background-image: radial-gradient(#163E73);
+    width: 100%;
+    background-image: radial-gradient(#21508e);
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 6px;
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     justify-items: center;
     transition: background 0.2s;
     box-shadow: 2px 2px rgb(0, 0, 0);
-    margin-top: 15px;
 }
 
 .btn-comprar:hover {
     background-image: radial-gradient(#5B9ED9, #163E73);
 
 }
-
-.btn-carrinho {
-    background-image: radial-gradient(#fc9b00);
-    color: rgb(255, 255, 255);
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.4s;
-    box-shadow: 1px 1px black;
+.close-modal{
+    display: flex;
 }
-
-.btn-carrinho:hover {
-    background-image: radial-gradient(#f2b203, #fc9b00);
-
-}
-
 .icon {
     display: flex;
-    color: #FCA311;
+    color: #ff6e00;
     cursor: pointer;
 }
-
-#banner {
-    margin-top: 60px;
-    width: 100%;
-    max-width: 80%;
-    justify-content: center;
-    text-align: center;
-    border-radius: 20px;
+.qrcode img{
+    width: 30%;
+    height: 30%;
+}
+.modal {
+    left: 25%;
+    top: 25%;
+    width: 800px;
+    height:400px;
+    padding: 15px;
 }
