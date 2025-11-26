@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styleContato.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+</head>
+
+<body>
+    <header class="header-principal">
+        <div class="header-titulo">
+            <h1>Store.com</h1>
+        </div>
+        <div id="sideBar">
+            <a href="/Senai - Front End/Ecommerce/categoria/catego.html"><span
+                    class="material-symbols-outlined">home</span></a>
+            <a href="/Senai - Front End/Ecommerce/carrinho/index.html"><span
+                    class="material-symbols-outlined">shopping_cart</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="coluna1">
+            <div id="sobre">
+                <h2>Sobre Nós</h2>
+                <p>
+                    Na <strong>Store.com</strong>, somos especialistas em curadoria tecnológica. Nossa missão é simplificar sua busca
+                    por inovação, oferecendo apenas produtos originais e de alta performance das melhores marcas do
+                    mercado.  <br><br>
+                    Qualidade, garantia e agilidade: aqui a tecnologia trabalha a seu favor.
+                </p>
+            </div>
+            <div id="localizacaoCard">
+                <h3>Nossa Localização</h3>
+                <p>Venha nos visitar</p>
+                <div id="map"></div>
+            </div>
+
+        </section>
+
+        <section class="formulario">
+            <form action="post">
+                <h2>Entre em contato</h2>
+                <label for="nome">Nome</label>
+                <input type="text">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone">
+                <label for="descricao">Descrição</label>
+                <textarea name="bio" id="bio" rows="4" cols="50" placeholder="Deixe seu feedback..."></textarea>
+                <div style="flex-direction: row; display: flex; justify-content: end;">
+                    <input type="submit" id="enviar" value="Enviar" onclick="finaliza()">
+                    <input type="reset" value="limpar" id="limpar">
+                </div>
+            </form>
+        </section>
+
+
+    </main>
+    <footer class="footer">
+        <p>Todos os direitos reservados ©copy</p>
+        <a href="/Senai - Front End/Ecommerce/contato/contato.html" id="contatos">Contato</a>
+    </footer>
+    <script src="JSContato.js"></script>
+
+</body>
+
+</html>

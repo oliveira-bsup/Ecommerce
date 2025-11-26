@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Estrutura do cabecalho-->
+    <header class="header-principal">
+        <h1>Store.com</h1>
+        <p>Os melhores produtos de informatica para você</p>
+        <div id="sideBar">
+            <a href="/Senai - Front End/Ecommerce/categoria/catego.html"><span
+                    class="material-symbols-outlined">home</span></a>
+            <a href="/Senai - Front End/Ecommerce/carrinho/index.html"><span
+                    class="material-symbols-outlined">shopping_cart</span></a>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="tituloPage">
+            <h1>Meu Carrinho</h1>
+        </div>
+        <section class="ajuste">
+            <section id="container-carrinho"></section>
+            
+            <div class="resumo-carrinho">
+                <div class="tituloPae">
+                    <h2>Resumo do Pedido</h2>
+                </div>
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <span id="subtotal-valor">0.00</span>
+                </div>
+                <div class="linha-resumo">
+                    <span>Frete</span>
+                    <span id="frete-valor">0.00</span>
+                </div>
+                <div class="linha-resumo">
+                    <span>Desconto</span>
+                    <span id="desconto-valor">0.00</span>
+                </div>
+                <div class="linha-resumo total-destaque">
+                    <span>TOTAL</span> <span id="total-final-valor">0.00</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+          <footer class="footer">
+        <p>Todos os direitos reservados ©copy</p>
+        <a href="/Senai - Front End/Ecommerce/contato/contato.html" id="contatos">Entre em contato</a>
+    </footer>
+
+    <!-- Estrutura do Rodape-->
+
+
+    <script src="carrinho.js"></script>
+</body>
+
+</html>
